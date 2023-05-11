@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/reservation"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Shop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/store"
+        android:textColor="#FF6600"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/Address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/location"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/TeleNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/contact"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/name" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#80C0C0C0"
+                android:layout_margin="5dp"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/MobilePhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/phone"
+                android:layout_margin="5dp" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#80C0C0C0"
+                android:inputType="phone" />
+
+            <TextView
+                android:id="@+id/GroupSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_of_pax"
+                android:layout_margin="5dp" />
+
+            <EditText
+                android:id="@+id/etSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#80C0C0C0"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/time_of_reservation"
+                android:layout_margin="5dp" />
+
+            <TimePicker
+                android:id="@+id/tp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner" />
+
+            <TextView
+                android:id="@+id/textDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/date_of_reservation"
+                android:layout_margin="5dp" />
+
+            <DatePicker
+                android:id="@+id/dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner" />
+
+            <TextView
+                android:id="@+id/Table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/preferred_table_area"
+                android:layout_margin="5dp" />
+
+            <RadioGroup
+                android:id="@+id/tableChoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">>
+
+                    <RadioButton
+                        android:id="@+id/Smoking"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/smoking_area" />
+
+                    <RadioButton
+                        android:id="@+id/nonSmoking"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="@string/non_smoking_area" />
+                </LinearLayout>
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="0dp"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cornerRadius="0dp"
+                    android:backgroundTint="#FF6600"
+                    android:text="@string/submit"/>
+
+                <Button
+                    android:id="@+id/btnReset"
+                    android:layout_width="0dp"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cornerRadius="0dp"
+                    android:backgroundTint="#FF6600"
+                    android:text="@string/reset" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDisplay"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textview" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
